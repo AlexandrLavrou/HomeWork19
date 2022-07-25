@@ -10,17 +10,10 @@ user_ns = Namespace('users')
 
 @user_ns.route('/')
 class UsersView(Resource):
+
     def get(self):
-        director = request.args.get("director_id")
-        genre = request.args.get("genre_id")
-        year = request.args.get("year")
-        filters = {
-            "director_id": director,
-            "genre_id": genre,
-            "year": year,
-        }
-        all_movies = user_service.get_all(filters)
-        res = UserSchema(many=True).dump(all_movies)
+        users = user_service.get_all()
+        res = UserSchema(many=True).dump(users)
         return res, 200
 
     def post(self):
