@@ -1,3 +1,35 @@
+POST http://127.0.0.1:10001/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "finkle",
+  "password": "fong",
+  "role": "user"
+}
+
+###
+POST http://127.0.0.1:10001/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Asshole",
+  "password": "poop",
+  "role": "admin"
+}
+
+###
+POST http://127.0.0.1:10001/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "oleg",
+  "password": "P@ssw0rd"
+}
+###
+
 GET http://127.0.0.1:10001/movies/
 Accept: application/json
 

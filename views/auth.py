@@ -18,8 +18,8 @@ class AuthView(Resource):
         tokens = auth_service.generate_tokens(username, password)
         if tokens:
             return tokens, 201
-
-        return "horror", 400
+        else:
+            return "horror", 400
 
     def put(self):
         data = request.json
