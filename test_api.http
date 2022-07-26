@@ -21,15 +21,24 @@ Content-Type: application/json
 
 ###
 POST http://127.0.0.1:10001/auth/
-Accept: application/json
 Content-Type: application/json
 
 {
-  "username": "oleg",
-  "password": "P@ssw0rd"
+  "username": "Asshole",
+  "password": "poop",
+  "role": "admin"
 }
 ###
+POST http://127.0.0.1:10001/auth/
+Content-Type: application/json
 
+{
+  "username": "finkle",
+  "password": "fong",
+  "role": "user"
+}
+
+###
 GET http://127.0.0.1:10001/movies/
 Accept: application/json
 
