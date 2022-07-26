@@ -11,14 +11,14 @@ class UserDAO:
     def get_all(self):
         return self.session.query(User).all()
 
-    def get_by_user_id(self, val):
-        return self.session.query(User).filter(User.id == val).all()
-
-    def get_by_user_role(self, val):
-        return self.session.query(User).filter(User.role == val).all()
+    # def get_by_user_id(self, val):
+    #     return self.session.query(User).filter(User.id == val).all()
+    #
+    # def get_by_user_role(self, val):
+    #     return self.session.query(User).filter(User.role == val).all()
 
     def get_by_username(self, val):
-        return self.session.query(User).filter(User.username == val).all()
+        return self.session.query(User).filter(User.username == val).first()
 
     def create(self, user_data):
         ent = User(**user_data)
